@@ -1,25 +1,25 @@
-import kleur from "kleur";
+import debugFactory from "debug";
 
 export class Logger {
   static debug(...args: any[]) {
     if(process.env.VERBOSE !== 'false') {
-      console.log(kleur.bold().grey('[log]'), ...args);
+      debugFactory("project:debug")(args);
     }
   }
 
-  static v(platform: string, op: string, ...args: any[]) {
-    this.debug(`${kleur.yellow(platform)}(${kleur.cyan(op)})`, ...args);
+  static v(source: string, operation: string, ...args: any[]) {
+    debugFactory(`project:${source}`)(operation, ...args);
   }
 
   static log(...args: any[]) {
-    console.log(...args);
+    debugFactory("project:log")(args);
   }
 
   static warn(...args: any[]) {
-    console.warn(...args);
+    debugFactory("project:warn")(args);
   }
 
   static error(...args: any[]) {
-    console.warn(...args);
+    debugFactory("project:error")(args);
   }
 }
