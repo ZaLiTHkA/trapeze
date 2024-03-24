@@ -4,24 +4,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Logger = void 0;
-const kleur_1 = __importDefault(require("kleur"));
+const debug_1 = __importDefault(require("debug"));
 class Logger {
     static debug(...args) {
         if (process.env.VERBOSE !== 'false') {
-            console.log(kleur_1.default.bold().grey('[log]'), ...args);
+            (0, debug_1.default)("project:debug")(args);
         }
     }
-    static v(platform, op, ...args) {
-        this.debug(`${kleur_1.default.yellow(platform)}(${kleur_1.default.cyan(op)})`, ...args);
+    static v(source, operation, ...args) {
+        (0, debug_1.default)(`project:${source}`)(operation, ...args);
     }
     static log(...args) {
-        console.log(...args);
+        (0, debug_1.default)("project:log")(args);
     }
     static warn(...args) {
-        console.warn(...args);
+        (0, debug_1.default)("project:warn")(args);
     }
     static error(...args) {
-        console.warn(...args);
+        (0, debug_1.default)("project:error")(args);
     }
 }
 exports.Logger = Logger;
