@@ -7,8 +7,6 @@
 > some nominal functional improvements and possible new features may be implemented in this fork, but only insofar as my
 > own personal usage of the included packages. other contributions are welcome, but due to limited time and
 > resources on my part, I cannot guarantee regular and steady maintenance.
-> 
-> the original `README` file continues below.
 
 ---
 
@@ -24,6 +22,23 @@
   <a href="https://www.npmjs.com/package/@trapezedev/configure"><img src="https://img.shields.io/npm/v/@trapezedev/configure?label=@trapezedev/configure" /></a>
   <a href="https://www.npmjs.com/package/@trapezedev/project"><img src="https://img.shields.io/npm/v/@trapezedev/project?label=@trapezedev/project" /></a>
 </p>
+
+---
+
+because of the structure of this workspace, you will need to use something like Vercel's
+[`gitpkg` service](https://gitpkg.vercel.app/about/) to install packages directly from this repository.
+
+for the `@trapezedev/configure` CLI tool from the `main` branch:
+
+```shell
+npm install https://gitpkg.now.sh/ZaLiTHkA/trapeze/packages/configure?main'
+```
+
+for the `@trapezedev/project` API package from the `main` branch:
+
+```shell
+npm install 'https://gitpkg.now.sh/ZaLiTHkA/trapeze/packages/project?main'
+```
 
 ---
 
