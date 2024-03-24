@@ -1,3 +1,17 @@
+> **Notes on Custom Fork**
+>
+> with Max Lynch now having left the Ionic Team, the `ionic-team/trapeze` GitHub project now appears to be abandoned.
+> this fork is _not_ an attempt at permanently taking over project maintenance, it is simply an intermediate space that
+> will hopefully as somewhere to collate and distribute bug fixes.
+>
+> some nominal functional improvements and possible new features may be implemented in this fork, but only insofar as my
+> own personal usage of the included packages. other contributions are welcome, but due to limited time and
+> resources on my part, I cannot guarantee regular and steady maintenance.
+> 
+> the original `README` file continues below.
+
+---
+
 <div align="center">
   <a href="https://trapeze.dev" target="_blank"><img src="https://github.com/ionic-team/trapeze/raw/main/logo.png" alt="Trapeze Logo" width="512" /></a>
 </div>
